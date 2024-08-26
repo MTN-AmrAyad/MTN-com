@@ -61,7 +61,7 @@ class FeelingMedcineAttendController extends Controller
 
     // login to ERP and insert lead from form to ERP Lead
     public function ERPLogin(Request $request)
-    {
+    {   
         $finalphone = $request->client_country_code . $request->client_phone;
         $response = Http::withHeaders([
             'Authorization' => 'Basic NWE4ZjBhODU3YjIyYWJmOmUxOWU3OGMxMjQ2MDY0OQ==',
@@ -119,7 +119,7 @@ class FeelingMedcineAttendController extends Controller
         ], 200);
     }
 
-   
+
     // Function caled in the insert to send message after inserting
     public function sendMessage(Request $request, $client_name, $phone)
     {
